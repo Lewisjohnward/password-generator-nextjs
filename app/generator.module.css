@@ -1,0 +1,233 @@
+.container {
+    width: 350px;
+}
+
+.container > *{
+    margin-top: 10px;
+    color: white;
+    padding: 18px;
+}
+
+
+.password_container {
+    display: flex;
+    background: var(--darkgray);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.copy_icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.copy_icon:hover {
+    transform: scale(1.1);
+}
+.copy_icon:active{
+    transform: scale(0.8);
+}
+
+
+.options_container {
+    display: flex;
+    flex-direction: column;
+    background: var(--darkgray);
+}
+
+.options_container > * {
+    margin-top: 10px;
+}
+
+.character_length {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.character_length_text{
+}
+
+.character_length_number {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--green);
+}
+
+.slider_container {
+    display: flex;
+    justify-content: center;
+}
+
+/***** Styling the range slider *****/
+/* Reset the style */
+.slider{
+    --webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 20rem;
+    margin-bottom: 10px;
+}
+
+.slider::-webkit-slider-runnable-track{
+    background: var(--green);
+    height: 0.4rem;
+}
+
+.slider::-moz-range-track {
+    background: var(--green);
+    height: 0.4rem;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -12px;
+    background-color: var(--darkgray);
+    border: 2px solid var(--green); 
+    border-radius: 15px; 
+    height: 15px;
+    width: 15px;
+}
+
+.slider::-moz-range-thumb {
+    border: 2px solid var(--green); /*Removes extra border that FF applies*/
+    border-radius: 15px; /*Removes default border-radius that FF applies*/
+    background-color: var(--darkgray);
+    height: 15px;
+    width: 15px;
+}
+
+.checkbox_container {
+    display: flex;
+    position: relative;
+}
+
+.container_check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.container_check input {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+
+/**** Checkbox ****/
+.mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: 1px solid var(--green);
+}
+
+.container_check input ~ .mark {
+    background-color: var(--darkgray);
+}
+
+.container_check input:checked ~ .mark {
+  background-color: var(--green);
+}
+
+.mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.container_check input:checked ~ .mark:after {
+  display: block;
+}
+
+.container_check .mark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--darkgray);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.strength_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #18171f;
+}
+
+.strength_display {
+    display: flex;
+}
+
+.strength_display > * {
+    margin-right: 5px;
+}
+
+.strength_text {
+    color: #767481;
+}
+
+.strength_box {
+    border: 1px solid white;
+    height: 20px;
+    width: 7px;
+}
+
+.strength_box_too_weak {
+    background: red;
+    height: 20px;
+    width: 7px;
+}
+
+.strength_box_weak {
+    background: yellow;
+    height: 20px;
+    width: 7px;
+}
+
+.strength_box_strong {
+    background: green;
+    height: 20px;
+    width: 7px;
+}
+
+.generate_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--green);
+    background: var(--darkgray);
+    color: #7ceb80;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.generate_btn > * {
+    margin-left: 15px;
+}
+
+.generate_btn:hover{
+    cursor: pointer;
+}
+
+.arrow_icon {
+    width: 15px;
+    height: 15px;
+}
